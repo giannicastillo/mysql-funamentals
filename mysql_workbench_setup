@@ -1,0 +1,27 @@
+-- INSERT 
+
+INSERT INTO tweets (tweet, user_id, created_at, updated_at)
+VALUES ("hello", 1, NOW(), NOW()); 
+
+SELECT * FROM tweets;
+
+-- SELECT
+
+SELECT * FROM users
+SELECT first_name, last_name FROM users;
+
+SELECT * FROM users
+WHERE id=1 OR id=2
+
+-- UPDATE
+
+SELECT * FROM users
+UPDATE twitter.users SET
+first_name = 'Vince'
+WHERE id = 2; 
+
+-- DELETE 
+
+SELECT * FROM tweets;
+DELETE FROM tweets
+WHERE id = 13; 
