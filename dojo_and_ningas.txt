@@ -1,0 +1,84 @@
+SELECT * FROM dojo_and_ninjas2.dojos;
+
+INSERT INTO dojo_and_ninjas2.dojos (id, name, created_at, updated_at)
+VALUES (1, "Dojo LA", NOW(), NOW());
+
+INSERT INTO dojo_and_ninjas2.dojos (id, name, created_at, updated_at)
+VALUES (2, "Dojo NY", NOW(), NOW()); 
+
+INSERT INTO dojo_and_ninjas2.dojos (id, name, created_at, updated_at)
+VALUES (3, "Dojo CHI", NOW(), NOW());
+
+--
+SELECT * FROM dojos; 
+DELETE FROM dojos
+WHERE id = 1;
+
+SELECT * FROM dojos; 
+DELETE FROM dojos
+WHERE id = 2;
+
+SELECT * FROM dojos; 
+DELETE FROM dojos
+WHERE id = 3;
+
+-- 
+
+INSERT INTO dojo_and_ninjas2.dojos (id, name, created_at, updated_at)
+VALUE (1, "Dojo MIA", NOW() , NOW()); 
+
+INSERT INTO dojo_and_ninjas2.dojos (id, name, created_at, updated_at) 
+VALUE (2, "Dojo Boston", NOW(), NOW()); 
+
+INSERT INTO dojo_and_ninjas2.dojos (id, name, created_at, updated_at)
+VALUE (3, "Dojo Atlanta", NOW(), NOW());
+--
+
+SELECT * FROM dojo_and_ninjas2.ninjas; 
+
+INSERT INTO dojo_and_ninjas2.ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (1, "Greg", "Ninja", 21, NOW(), NOW(), 1)
+
+INSERT INTO dojo_and_ninjas2.ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (2, "Gary", "Ninja", 21, NOW(), NOW(), 1);
+
+INSERT INTO dojo_and_ninjas2.ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (3, "Gina", "Ninja", 21, NOW(), NOW(), 1);
+
+--
+
+SELECT * FROM dojo_and_ninjas2.ninjas; 
+
+INSERT INTO dojo_and_ninjas2.ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (4, "Peter", "Ninja", 21, NOW(), NOW(), 2);
+
+INSERT INTO dojo_and_ninjas2.ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (5, "Patrick", "Ninja", 21, NOW(), NOW(), 2);
+
+INSERT INTO dojo_and_ninjas2.ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (6, "Penny", "Ninja", 21, NOW(), NOW(), 2);
+
+--
+
+SELECT * FROM dojo_and_ninjas2.ninjas; 
+
+INSERT INTO dojo_and_ninjas2.ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (7, "Nick", "Ninja", 21, NOW(), NOW(), 3);
+
+INSERT INTO dojo_and_ninjas2.ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (8, "Nancy", "Ninja", 21, NOW(), NOW(), 3);
+
+INSERT INTO dojo_and_ninjas2.ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (9, "Nathan", "Ninja", 21, NOW(), NOW(), 3);
+
+-- 
+
+SELECT * FROM dojo_and_ninjas2.ninjas
+WHERE dojo_id =1; 
+
+SELECT * FROM dojo_and_ninjas2.ninjas
+WHERE dojo_id =3;
+
+SELECT * FROM dojo_and_ninjas2.dojos
+WHERE id =3;
+
