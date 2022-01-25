@@ -1,0 +1,54 @@
+SELECT languages.percentage, languages.language, countries.name FROM languages
+LEFT JOIN countries ON  countries.id = languages.country_id
+WHERE language = "Slovene"
+ORDER BY percentage DESC;
+
+--
+SELECT countries.name, COUNT(cities.name) AS cities FROM world.countries 
+LEFT JOIN cities ON cities.country_id = countries.id
+GROUP BY countries.name 
+ORDER BY cities DESC;
+
+--
+
+SELECT cities.name, cities.population, countries.name FROM world.cities
+LEFT JOIN countries ON cities.country_id = countries.id
+WHERE countries.name ="Mexico" AND cities.population > 500000
+ORDER BY cities.population DESC;
+
+--
+SELECT * FROM languages;
+
+SELECT languages.language, languages.percentage FROM world.languages
+LEFT JOIN countries ON languages.country_id = countries.id
+WHERE languages.percentage > 89
+ORDER BY languages.percentage DESC;
+
+--
+SELECT countries.surface_area, countries.population FROM world.countries
+LEFT JOIN cities ON cities.country_id = countries.id
+WHERE surface_area < 501 AND countries.population > 100000;
+
+
+--
+
+SELECT * FROM countries;
+
+SELECT countries.government_form, countries.capital, countries.life_expectancy FROM world.countries
+WHERE countries.government_form ="Constitutional Monarchy" AND countries.life_expectancy > 75 AND countries.capital > 200;
+ 
+--
+SELECT * FROM cities;
+
+SELECT countries.name, cities.name, cities.district, cities.population FROM world.cities
+LEFT JOIN countries ON cities.country_id = countries.id
+WHERE countries.name ="Argentina" AND cities.population > 500000 AND cities.district = "Buenos Aires";
+
+--
+
+Avg(countries.region)
+SELECT * FROM countries
+
+SELECT countries.region, COUNT(countries.name) AS numcon FROM world.countries
+GROUP BY countries.region
+ORDER BY numcon DESC
